@@ -26,8 +26,8 @@
 
           src = ./.;
 
-          nativeBuildInputs = hyprlandPkg.nativeBuildInputs;
-          buildInputs = [hyprlandPkg] ++ hyprlandPkg.buildInputs;
+          nativeBuildInputs = hyprlandPkg.nativeBuildInputs ++ [pkgs.wlroots];
+          buildInputs = [hyprlandPkg pkgs.wlroots] ++ hyprlandPkg.buildInputs;
 
           meta = with lib; {
             homepage = "https://github.com/raybbian/hyprtasking";
